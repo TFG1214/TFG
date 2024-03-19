@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('week', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->integer('n_week');
+            $table->integer('year');
         });
     }
 

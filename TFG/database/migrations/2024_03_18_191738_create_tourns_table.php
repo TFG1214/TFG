@@ -14,6 +14,11 @@ return new class extends Migration
         Schema::create('tourns', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->integer('n_dia');
+            $table->foreingID('turno_manana')->references('id')->on('users');
+            $table->foreingID('turno_tarde')->references('id')->on('users');
+            $table->foreingID('turno_noche')->references('id')->on('users');
+            $table->foreingID('week_id')->references('id')->on('weeks');
         });
     }
 
