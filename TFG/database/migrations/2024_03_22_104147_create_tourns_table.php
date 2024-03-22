@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->integer('n_dia');
-            $table->foreingID('turno_manana')->references('id')->on('users');
-            $table->foreingID('turno_tarde')->references('id')->on('users');
-            $table->foreingID('turno_noche')->references('id')->on('users');
-            $table->foreingID('week_id')->references('id')->on('weeks');
+            $table->foreignID('turno_manana')->references('id')->on('users');
+            $table->foreignID('turno_tarde')->references('id')->on('users');
+            $table->foreignID('turno_noche')->references('id')->on('users');
+            $table->foreignID('week_id')->references('id')->on('weeks');
         });
     }
 
